@@ -1,0 +1,49 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "HG_out",
+					"strict" : false
+				},
+				{
+					"name" : "PS_out",
+					"strict" : false
+				},
+				{
+					"name" : "VB_out",
+					"strict" : false
+				},
+				{
+					"name" : "CY_out",
+					"strict" : false
+				},
+				{
+					"name" : "BW_out",
+					"strict" : false
+				},
+				{
+					"name" : "M_W",
+					"strict" : false
+				},
+				{
+					"name" : "M_R",
+					"strict" : false
+				},
+				{
+					"name" : "C_R",
+					"strict" : false
+				},
+				{
+					"name" : "C_T",
+					"strict" : false
+				},
+				{
+					"name" : "C_W",
+					"strict" : false
+				}
+			]
+		}
+	]
+}
