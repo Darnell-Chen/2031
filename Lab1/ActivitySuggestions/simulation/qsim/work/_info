@@ -1,0 +1,103 @@
+m255
+K4
+z2
+!s11e vcom 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dD:/ECE2031/Lab1/ActivitySuggestions/simulation/qsim
+Eactivitysuggestions
+Z1 w1736900939
+Z2 DPx4 ieee 16 vital_primitives 0 22 G>kiXP8Q9dRClKfK1Zn7j1
+Z3 DPx8 cyclonev 18 cyclonev_atom_pack 0 22 3HQPc5MVbmOPN?>a5EBYj2
+Z4 DPx4 ieee 12 vital_timing 0 22 J>EBealN09f8GzldA[z2>3
+Z5 DPx8 cyclonev 19 cyclonev_components 0 22 jZ]H46BQLgIP5mfRTO`3B1
+Z6 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z7 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+Z8 DPx12 altera_lnsim 23 altera_lnsim_components 0 22 ^Ch;U@;bMk1;>A2B<UV`k2
+!i122 8
+R0
+Z9 8ActivitySuggestions.vho
+Z10 FActivitySuggestions.vho
+l0
+L37 1
+Ve6on^Eb?g1c4TIelIK@4N2
+!s100 Fnb15jNRG1eXJ8GRU[QhC1
+Z11 OV;C;2020.1;71
+32
+Z12 !s110 1736900940
+!i10b 1
+Z13 !s108 1736900940.000000
+Z14 !s90 -work|work|ActivitySuggestions.vho|
+Z15 !s107 ActivitySuggestions.vho|
+!i113 1
+Z16 o-work work
+Z17 tExplicit 1 CvgOpt 0
+Astructure
+R2
+R3
+R4
+R5
+R6
+R7
+R8
+DEx4 work 19 activitysuggestions 0 22 e6on^Eb?g1c4TIelIK@4N2
+!i122 8
+l107
+L67 289
+VUm6IG0`=bj13FKJnm2B;42
+!s100 ;a@k?[:]1ojR`KN738;Hj2
+R11
+32
+R12
+!i10b 1
+R13
+R14
+R15
+!i113 1
+R16
+R17
+Eactivitysuggestions_vhd_vec_tst
+Z18 w1736900938
+R6
+R7
+!i122 9
+R0
+Z19 8ActivitySuggestions.vwf.vht
+Z20 FActivitySuggestions.vwf.vht
+l0
+L32 1
+VlBb=MnE:M?SG>a_`7WCKi0
+!s100 f1KE[Ag8LGOGT[>F9Sm:G0
+R11
+32
+R12
+!i10b 1
+R13
+Z21 !s90 -work|work|ActivitySuggestions.vwf.vht|
+Z22 !s107 ActivitySuggestions.vwf.vht|
+!i113 1
+R16
+R17
+Aactivitysuggestions_arch
+R6
+R7
+Z23 DEx4 work 31 activitysuggestions_vhd_vec_tst 0 22 lBb=MnE:M?SG>a_`7WCKi0
+!i122 9
+l63
+L34 118
+V@VQTWi<SS>ZcS=iYJc0]M3
+!s100 ooS>TU>`^k2Nhzm4QOohS3
+R11
+32
+R12
+!i10b 1
+R13
+R21
+R22
+!i113 1
+R16
+R17

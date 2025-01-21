@@ -1,0 +1,17 @@
+vendor_name = ModelSim
+source_file = 1, D:/ECE2031/Lab1/ActivitySuggestions/ActivitySuggestions.bdf
+source_file = 1, D:/ECE2031/Lab1/ActivitySuggestions/ActivitySuggestions.vwf
+source_file = 1, D:/ECE2031/Lab1/ActivitySuggestions/db/ActivitySuggestions.cbx.xml
+design_name = ActivitySuggestions
+instance = comp, \HG_out~output\, HG_out~output, ActivitySuggestions, 1
+instance = comp, \PS_out~output\, PS_out~output, ActivitySuggestions, 1
+instance = comp, \VB_out~output\, VB_out~output, ActivitySuggestions, 1
+instance = comp, \CY_out~output\, CY_out~output, ActivitySuggestions, 1
+instance = comp, \BW_out~output\, BW_out~output, ActivitySuggestions, 1
+instance = comp, \M_W~input\, M_W~input, ActivitySuggestions, 1
+instance = comp, \M_R~input\, M_R~input, ActivitySuggestions, 1
+instance = comp, \C_T~input\, C_T~input, ActivitySuggestions, 1
+instance = comp, \C_R~input\, C_R~input, ActivitySuggestions, 1
+instance = comp, \C_W~input\, C_W~input, ActivitySuggestions, 1
+instance = comp, \M_T~input\, M_T~input, ActivitySuggestions, 1
+instance = comp, \~QUARTUS_CREATED_GND~I\, ~QUARTUS_CREATED_GND~I, ActivitySuggestions, 1
