@@ -1,0 +1,27 @@
+|Lab4Circuit
+Q[0] <= 7474:inst14.2Q
+Q[1] <= 7474:inst14.1Q
+clock => 7474:inst14.1CLK
+clock => 7474:inst14.2CLK
+cool => inst4.IN0
+cool => inst2.IN1
+xmas => inst3.IN0
+resetn => 7474:inst14.2CLRN
+resetn => 7474:inst14.1CLRN
+
+
+|Lab4Circuit|7474:inst14
+1Q <= 9.DB_MAX_OUTPUT_PORT_TYPE
+1CLRN => 9.ACLR
+1CLK => 9.CLK
+1D => 9.DATAIN
+1PRN => 9.PRESET
+1QN <= 16.DB_MAX_OUTPUT_PORT_TYPE
+2Q <= 10.DB_MAX_OUTPUT_PORT_TYPE
+2CLRN => 10.ACLR
+2CLK => 10.CLK
+2D => 10.DATAIN
+2PRN => 10.PRESET
+2QN <= 15.DB_MAX_OUTPUT_PORT_TYPE
+
+

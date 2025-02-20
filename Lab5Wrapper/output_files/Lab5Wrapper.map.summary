@@ -1,0 +1,17 @@
+Analysis & Synthesis Status : Successful - Tue Feb 18 19:47:58 2025
+Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+Revision Name : Lab5Wrapper
+Top-level Entity Name : Lab5Wrapper
+Family : Cyclone V
+Logic utilization (in ALMs) : N/A
+Total registers : 467
+Total pins : 10
+Total virtual pins : 0
+Total block memory bits : 1,792
+Total DSP Blocks : 0
+Total HSSI RX PCSs : 0
+Total HSSI PMA RX Deserializers : 0
+Total HSSI TX PCSs : 0
+Total HSSI PMA TX Serializers : 0
+Total PLLs : 1
+Total DLLs : 0

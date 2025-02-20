@@ -1,0 +1,17 @@
+vendor_name = ModelSim
+source_file = 1, D:/ECE2031/Lab4/Lab4Circuit.bdf
+source_file = 1, Lab 4 Waveform.vwf
+source_file = 1, D:/ECE2031/Lab4/Lab_4_waveform.vwf
+source_file = 1, lab4_waveform.vwf
+source_file = 1, waveformCircuit.vwf
+source_file = 1, c:/intelfpga_lite/20.1.1/quartus/libraries/others/maxplus2/7474.bdf
+design_name = Lab4Circuit
+instance = comp, \Q[1]~output\, Q[1]~output, Lab4Circuit, 1
+instance = comp, \Q[0]~output\, Q[0]~output, Lab4Circuit, 1
+instance = comp, \clock~input\, clock~input, Lab4Circuit, 1
+instance = comp, \resetn~input\, resetn~input, Lab4Circuit, 1
+instance = comp, \inst14|10\, inst14|10, Lab4Circuit, 1
+instance = comp, \cool~input\, cool~input, Lab4Circuit, 1
+instance = comp, \xmas~input\, xmas~input, Lab4Circuit, 1
+instance = comp, \inst5~0\, inst5~0, Lab4Circuit, 1
+instance = comp, \inst14|9\, inst14|9, Lab4Circuit, 1
