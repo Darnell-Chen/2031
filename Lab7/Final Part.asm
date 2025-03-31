@@ -1,0 +1,41 @@
+; SimpleDemo.asm
+; Tests basic instructions in SCOMP
+
+ORG 0
+LOAD VALUE
+AND LSBBITS
+
+
+STORE LSB
+
+LOAD VALUE
+SHIFT -12
+AND LSBBITS
+STORE MSB
+
+SUB LSB
+JNEG LsbLarger
+JPOS MsbLarger
+
+LsbLarger:
+LOAD LSB
+STORE RESULT
+Jump Finish
+
+MsbLarger:
+LOAD MSB
+STORE RESULT
+JUMP Finish
+
+Finish:
+JUMP Finish
+
+
+
+ORG 200
+VALUE: 	DW	&HF00E
+LSB:	EQU 512
+MSB: 	EQU 516
+RESULT: EQU 1024
+
+LSBBITS: DW &H000F

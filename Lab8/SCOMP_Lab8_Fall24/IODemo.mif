@@ -1,0 +1,73 @@
+WIDTH=16;
+DEPTH=2048;
+
+ADDRESS_RADIX=HEX;
+DATA_RADIX=HEX;
+
+CONTENT BEGIN
+0000: 9000; -- 	IN     	Switches
+0001: 1037; --  	STORE 	InitialInput
+0002: 1038; --     STORE currentInput
+0003: 083B; --     LOAD	Zero
+0004: 1039; --     Store 	Index
+0005: 103A; --     Store 	Counter
+0006: 0837; --     LOAD 	InitialInput
+0007: 2821; --     JUMP 	Check_Switches
+0008: 9801; -- 	OUT    LEDs
+0009: 103C; -- 	STORE  Pattern
+000A: 801C; -- 	CALL   Delay
+000B: 083C; -- 	LOAD   Pattern
+000C: 483E; -- 	AND    Bit9         ; bit mask
+000D: 3813; -- 	JPOS   Right        ; bit9 is 1; go right
+000E: 083C; -- 	LOAD   Pattern
+000F: 6001; -- 	SHIFT  1
+0010: 103C; -- 	STORE  Pattern
+0011: 9801; -- 	OUT    LEDs
+0012: 280A; -- 	JUMP   Left
+0013: 801C; -- 	CALL   Delay
+0014: 083C; -- 	LOAD   Pattern
+0015: 483D; -- 	AND    Bit0         ; bit mask
+0016: 380A; -- 	JPOS   Left         ; bit0 is 1; go left
+0017: 083C; -- 	LOAD   Pattern
+0018: 6011; -- 	SHIFT  -1
+0019: 103C; -- 	STORE  Pattern
+001A: 9801; -- 	OUT    LEDs
+001B: 2813; -- 	JUMP   Right
+001C: 9802; -- 	OUT    Timer
+001D: 9002; -- 	IN     Timer
+001E: 6FFB; -- 	ADDI   -5
+001F: 301D; -- 	JNEG   WaitingLoop
+0020: 8800; -- 	RETURN
+0021: 0838; -- 	LOAD currentInput
+0022: 402C; --     JZERO Clear_Return
+0023: 483D; --     AND	Bit0
+0024: 3827; --     JPOS Increment_Counter
+0025: 8031; --     CALL SHIFT_RIGHT
+0026: 4021; --     JZERO Check_Switches
+0027: 083A; -- 	LOAD Counter
+0028: 6801; --     ADDI 1
+0029: 103A; --     STORE Counter
+002A: 8031; --     CALL SHIFT_RIGHT
+002B: 2821; --     JUMP Check_Switches
+002C: 083A; -- 	LOAD Counter
+002D: 6FFE; --     ADDI -2
+002E: 3800; --     JPOS Get_Again
+002F: 0837; --     LOAD InitialInput
+0030: 2808; --     JUMP Continue
+0031: 0838; -- 	LOAD currentInput
+0032: 6011; --     SHIFT -1
+0033: 1038; --     STORE currentInput
+0034: 6001; --     SHIFT 1
+0035: 483D; --     AND Bit0
+0036: 8800; --     RETURN
+0037: 0000; -- InitialInput: 	DW 0
+0038: 0000; -- currentInput: 	DW 0
+0039: 0000; -- Index:			DW 0
+003A: 0000; -- Counter:		DW 0
+003B: 0000; -- Zero:			DW 0
+003C: 0000; -- Pattern:   DW 0	
+003D: 0001; -- Bit0:      DW &amp;B0000000001
+003E: 0200; -- Bit9:      DW &amp;B1000000000
+[003F..07FF] : 0000; -- [empty memory]
+END;
+

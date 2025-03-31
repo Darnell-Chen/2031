@@ -1,0 +1,68 @@
+ORG 0
+
+LOAD START_AC_VAL
+CALL FindLowestSetBit
+STORE Result1
+CALL FindLowestSetBit
+STORE Result2
+CALL FindLowestSetBit
+STORE Result3
+CALL FindLowestSetBit
+STORE Result4
+JUMP END
+
+FindLowestSetBit:
+    STORE AC_VAL
+    
+    LOAD ZERO
+    STORE FLSB_Temp
+    
+    LOAD AC_VAL
+	AND ALL_BITS
+    JZERO SET_NEGATIVE
+    
+AFTER_NEGATIVE:
+    JPOS CHECK
+DONE:
+    LOAD FLSB_Temp
+    RETURN
+
+CHECK:
+    LOAD AC_VAL
+    AND CLEAR_HIGHER
+    
+    JPOS DONE
+    CALL INCREMENT
+    JUMP CHECK
+    
+
+INCREMENT:
+    LOAD AC_VAL
+    SHIFT -1
+    STORE AC_VAL
+	LOAD FLSB_Temp
+    ADDI 1
+    STORE FLSB_Temp
+    RETURN
+
+SET_NEGATIVE:
+	LOAD FLSB_Temp
+    ADDI -1
+    STORE FLSB_Temp
+    JUMP AFTER_NEGATIVE
+
+END:
+	JUMP END
+
+
+
+ZERO: DW 0
+START_AC_VAL: DW 10496
+AC_VAL: DW 0
+ALL_BITS: DW &HFFFF
+CLEAR_HIGHER: DW 1
+FLSB_Temp: DW 0
+Result1: DW 0
+Result2: DW 0
+Result3: DW 0
+Result4: DW 0
