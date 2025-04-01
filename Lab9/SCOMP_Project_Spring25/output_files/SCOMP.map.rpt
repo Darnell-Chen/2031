@@ -1,5 +1,5 @@
 Analysis & Synthesis report for SCOMP
-Sun Mar 30 20:29:01 2025
+Mon Mar 31 18:07:13 2025
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -23,7 +23,7 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
  15. General Register Statistics
  16. Inverted Register Statistics
  17. Multiplexer Restructuring Statistics (Restructuring Performed)
- 18. Source assignments for SCOMP:inst|altsyncram:altsyncram_component|altsyncram_at24:auto_generated
+ 18. Source assignments for SCOMP:inst|altsyncram:altsyncram_component|altsyncram_8d24:auto_generated
  19. Source assignments for PLL_main:inst1|PLL_main_0002:pll_main_inst|altera_pll:altera_pll_i
  20. Source assignments for PLL_main:inst1|PLL_main_0002:pll_main_inst|altera_pll:altera_pll_i|altera_pll_dps_lcell_comb:lcell_cntsel_int_0
  21. Source assignments for PLL_main:inst1|PLL_main_0002:pll_main_inst|altera_pll:altera_pll_i|altera_pll_dps_lcell_comb:lcell_cntsel_int_1
@@ -70,13 +70,13 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Sun Mar 30 20:29:01 2025       ;
+; Analysis & Synthesis Status     ; Successful - Mon Mar 31 18:07:13 2025       ;
 ; Quartus Prime Version           ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                   ; SCOMP                                       ;
 ; Top-level Entity Name           ; SCOMP_System                                ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 742                                         ;
+; Total registers                 ; 760                                         ;
 ; Total pins                      ; 68                                          ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 45,056                                      ;
@@ -221,7 +221,8 @@ https://fpgasoftware.intel.com/eula.
 ; altrom.inc                                                         ; yes             ; Megafunction                                 ; c:/intelfpga_lite/20.1.1/quartus/libraries/megafunctions/altrom.inc                                       ;             ;
 ; altram.inc                                                         ; yes             ; Megafunction                                 ; c:/intelfpga_lite/20.1.1/quartus/libraries/megafunctions/altram.inc                                       ;             ;
 ; altdpram.inc                                                       ; yes             ; Megafunction                                 ; c:/intelfpga_lite/20.1.1/quartus/libraries/megafunctions/altdpram.inc                                     ;             ;
-; db/altsyncram_at24.tdf                                             ; yes             ; Auto-Generated Megafunction                  ; D:/ECE2031/Lab9/SCOMP_Project_Spring25/db/altsyncram_at24.tdf                                             ;             ;
+; db/altsyncram_8d24.tdf                                             ; yes             ; Auto-Generated Megafunction                  ; D:/ECE2031/Lab9/SCOMP_Project_Spring25/db/altsyncram_8d24.tdf                                             ;             ;
+; Dimmer2.mif                                                        ; yes             ; Auto-Found Memory Initialization File        ; D:/ECE2031/Lab9/SCOMP_Project_Spring25/Dimmer2.mif                                                        ;             ;
 ; lpm_clshift.tdf                                                    ; yes             ; Megafunction                                 ; c:/intelfpga_lite/20.1.1/quartus/libraries/megafunctions/lpm_clshift.tdf                                  ;             ;
 ; db/lpm_clshift_fuc.tdf                                             ; yes             ; Auto-Generated Megafunction                  ; D:/ECE2031/Lab9/SCOMP_Project_Spring25/db/lpm_clshift_fuc.tdf                                             ;             ;
 ; lpm_bustri.tdf                                                     ; yes             ; Megafunction                                 ; c:/intelfpga_lite/20.1.1/quartus/libraries/megafunctions/lpm_bustri.tdf                                   ;             ;
@@ -275,6 +276,7 @@ https://fpgasoftware.intel.com/eula.
 ; db/ip/sldfd7bd03d/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd ; yes             ; Encrypted Auto-Found VHDL File               ; D:/ECE2031/Lab9/SCOMP_Project_Spring25/db/ip/sldfd7bd03d/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd ; alt_sld_fab ;
 ; db/ip/sldfd7bd03d/submodules/alt_sld_fab_alt_sld_fab_splitter.sv   ; yes             ; Encrypted Auto-Found SystemVerilog HDL File  ; D:/ECE2031/Lab9/SCOMP_Project_Spring25/db/ip/sldfd7bd03d/submodules/alt_sld_fab_alt_sld_fab_splitter.sv   ; alt_sld_fab ;
 ; sld_jtag_hub.vhd                                                   ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/20.1.1/quartus/libraries/megafunctions/sld_jtag_hub.vhd                                 ;             ;
+; db/altsyncram_at24.tdf                                             ; yes             ; Auto-Generated Megafunction                  ; D:/ECE2031/Lab9/SCOMP_Project_Spring25/db/altsyncram_at24.tdf                                             ;             ;
 +--------------------------------------------------------------------+-----------------+----------------------------------------------+-----------------------------------------------------------------------------------------------------------+-------------+
 
 
@@ -283,16 +285,16 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+--------------------------+
 ; Resource                                    ; Usage                    ;
 +---------------------------------------------+--------------------------+
-; Estimate of Logic utilization (ALMs needed) ; 544                      ;
+; Estimate of Logic utilization (ALMs needed) ; 552                      ;
 ;                                             ;                          ;
-; Combinational ALUT usage for logic          ; 710                      ;
+; Combinational ALUT usage for logic          ; 723                      ;
 ;     -- 7 input functions                    ; 4                        ;
 ;     -- 6 input functions                    ; 143                      ;
-;     -- 5 input functions                    ; 194                      ;
-;     -- 4 input functions                    ; 98                       ;
-;     -- <=3 input functions                  ; 271                      ;
+;     -- 5 input functions                    ; 197                      ;
+;     -- 4 input functions                    ; 100                      ;
+;     -- <=3 input functions                  ; 279                      ;
 ;                                             ;                          ;
-; Dedicated logic registers                   ; 742                      ;
+; Dedicated logic registers                   ; 760                      ;
 ;                                             ;                          ;
 ; I/O pins                                    ; 68                       ;
 ; Total MLAB memory bits                      ; 0                        ;
@@ -305,7 +307,7 @@ https://fpgasoftware.intel.com/eula.
 ;                                             ;                          ;
 ; Maximum fan-out node                        ; altera_internal_jtag~TDO ;
 ; Maximum fan-out                             ; 341                      ;
-; Total fan-out                               ; 6092                     ;
+; Total fan-out                               ; 6202                     ;
 ; Average fan-out                             ; 3.76                     ;
 +---------------------------------------------+--------------------------+
 
@@ -315,7 +317,7 @@ https://fpgasoftware.intel.com/eula.
 +-----------------------------------------------------------------------------------------------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------+--------------+
 ; Compilation Hierarchy Node                                                                                                              ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                                                                                                                                                                                                                      ; Entity Name                       ; Library Name ;
 +-----------------------------------------------------------------------------------------------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------+--------------+
-; |SCOMP_System                                                                                                                           ; 710 (17)            ; 742 (0)                   ; 45056             ; 0          ; 68   ; 0            ; |SCOMP_System                                                                                                                                                                                                                                                                                                                                            ; SCOMP_System                      ; work         ;
+; |SCOMP_System                                                                                                                           ; 723 (17)            ; 760 (0)                   ; 45056             ; 0          ; 68   ; 0            ; |SCOMP_System                                                                                                                                                                                                                                                                                                                                            ; SCOMP_System                      ; work         ;
 ;    |DIG_IN:inst7|                                                                                                                       ; 0 (0)               ; 10 (10)                   ; 0                 ; 0          ; 0    ; 0            ; |SCOMP_System|DIG_IN:inst7                                                                                                                                                                                                                                                                                                                               ; DIG_IN                            ; work         ;
 ;    |HEX_DISP_6:inst9|                                                                                                                   ; 47 (5)              ; 24 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |SCOMP_System|HEX_DISP_6:inst9                                                                                                                                                                                                                                                                                                                           ; HEX_DISP_6                        ; work         ;
 ;       |HEX_DISP:inst1|                                                                                                                  ; 7 (7)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |SCOMP_System|HEX_DISP_6:inst9|HEX_DISP:inst1                                                                                                                                                                                                                                                                                                            ; HEX_DISP                          ; work         ;
@@ -325,6 +327,7 @@ https://fpgasoftware.intel.com/eula.
 ;       |HEX_DISP:inst5|                                                                                                                  ; 7 (7)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |SCOMP_System|HEX_DISP_6:inst9|HEX_DISP:inst5                                                                                                                                                                                                                                                                                                            ; HEX_DISP                          ; work         ;
 ;       |HEX_DISP:inst6|                                                                                                                  ; 7 (7)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |SCOMP_System|HEX_DISP_6:inst9|HEX_DISP:inst6                                                                                                                                                                                                                                                                                                            ; HEX_DISP                          ; work         ;
 ;    |IO_DECODER:inst3|                                                                                                                   ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |SCOMP_System|IO_DECODER:inst3                                                                                                                                                                                                                                                                                                                           ; IO_DECODER                        ; work         ;
+;    |LEDController:inst12|                                                                                                               ; 13 (13)             ; 18 (18)                   ; 0                 ; 0          ; 0    ; 0            ; |SCOMP_System|LEDController:inst12                                                                                                                                                                                                                                                                                                                       ; LEDController                     ; work         ;
 ;    |PLL_main:inst1|                                                                                                                     ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |SCOMP_System|PLL_main:inst1                                                                                                                                                                                                                                                                                                                             ; PLL_main                          ; pll_main     ;
 ;       |PLL_main_0002:pll_main_inst|                                                                                                     ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |SCOMP_System|PLL_main:inst1|PLL_main_0002:pll_main_inst                                                                                                                                                                                                                                                                                                 ; PLL_main_0002                     ; PLL_main     ;
 ;          |altera_pll:altera_pll_i|                                                                                                      ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |SCOMP_System|PLL_main:inst1|PLL_main_0002:pll_main_inst|altera_pll:altera_pll_i                                                                                                                                                                                                                                                                         ; altera_pll                        ; work         ;
@@ -332,7 +335,7 @@ https://fpgasoftware.intel.com/eula.
 ;                |altera_cyclonev_pll_base:fpll_0|                                                                                        ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |SCOMP_System|PLL_main:inst1|PLL_main_0002:pll_main_inst|altera_pll:altera_pll_i|altera_cyclonev_pll:cyclonev_pll|altera_cyclonev_pll_base:fpll_0                                                                                                                                                                                                        ; altera_cyclonev_pll_base          ; work         ;
 ;    |SCOMP:inst|                                                                                                                         ; 252 (214)           ; 179 (179)                 ; 32768             ; 0          ; 0    ; 0            ; |SCOMP_System|SCOMP:inst                                                                                                                                                                                                                                                                                                                                 ; SCOMP                             ; work         ;
 ;       |altsyncram:altsyncram_component|                                                                                                 ; 0 (0)               ; 0 (0)                     ; 32768             ; 0          ; 0    ; 0            ; |SCOMP_System|SCOMP:inst|altsyncram:altsyncram_component                                                                                                                                                                                                                                                                                                 ; altsyncram                        ; work         ;
-;          |altsyncram_at24:auto_generated|                                                                                               ; 0 (0)               ; 0 (0)                     ; 32768             ; 0          ; 0    ; 0            ; |SCOMP_System|SCOMP:inst|altsyncram:altsyncram_component|altsyncram_at24:auto_generated                                                                                                                                                                                                                                                                  ; altsyncram_at24                   ; work         ;
+;          |altsyncram_8d24:auto_generated|                                                                                               ; 0 (0)               ; 0 (0)                     ; 32768             ; 0          ; 0    ; 0            ; |SCOMP_System|SCOMP:inst|altsyncram:altsyncram_component|altsyncram_8d24:auto_generated                                                                                                                                                                                                                                                                  ; altsyncram_8d24                   ; work         ;
 ;       |lpm_clshift:shifter|                                                                                                             ; 38 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |SCOMP_System|SCOMP:inst|lpm_clshift:shifter                                                                                                                                                                                                                                                                                                             ; lpm_clshift                       ; work         ;
 ;          |lpm_clshift_fuc:auto_generated|                                                                                               ; 38 (38)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |SCOMP_System|SCOMP:inst|lpm_clshift:shifter|lpm_clshift_fuc:auto_generated                                                                                                                                                                                                                                                                              ; lpm_clshift_fuc                   ; work         ;
 ;    |TIMER:inst4|                                                                                                                        ; 33 (33)             ; 16 (16)                   ; 0                 ; 0          ; 0    ; 0            ; |SCOMP_System|TIMER:inst4                                                                                                                                                                                                                                                                                                                                ; TIMER                             ; work         ;
@@ -384,14 +387,14 @@ https://fpgasoftware.intel.com/eula.
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis RAM Summary                                                                                                                                                                                                                                                                           ;
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+-------+------+
-; Name                                                                                                                                                                                                  ; Type ; Mode             ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size  ; MIF  ;
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+-------+------+
-; SCOMP:inst|altsyncram:altsyncram_component|altsyncram_at24:auto_generated|ALTSYNCRAM                                                                                                                  ; AUTO ; Single Port      ; 2048         ; 16           ; --           ; --           ; 32768 ; None ;
-; sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|altsyncram:\stp_non_zero_ram_gen:stp_buffer_ram|altsyncram_ke84:auto_generated|ALTSYNCRAM ; AUTO ; Simple Dual Port ; 4096         ; 3            ; 4096         ; 3            ; 12288 ; None ;
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+-------+------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis RAM Summary                                                                                                                                                                                                                                                                                  ;
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+-------+-------------+
+; Name                                                                                                                                                                                                  ; Type ; Mode             ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size  ; MIF         ;
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+-------+-------------+
+; SCOMP:inst|altsyncram:altsyncram_component|altsyncram_8d24:auto_generated|ALTSYNCRAM                                                                                                                  ; AUTO ; Single Port      ; 2048         ; 16           ; --           ; --           ; 32768 ; Dimmer2.mif ;
+; sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|altsyncram:\stp_non_zero_ram_gen:stp_buffer_ram|altsyncram_ke84:auto_generated|ALTSYNCRAM ; AUTO ; Simple Dual Port ; 4096         ; 3            ; 4096         ; 3            ; 12288 ; None        ;
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+-------+-------------+
 
 
 +---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -503,7 +506,6 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; SCOMP:inst|AC_saved[0..15]                                                                                                          ; Stuck at GND due to stuck port clock_enable ;
 ; SCOMP:inst|PC_saved[0..10]                                                                                                          ; Stuck at GND due to stuck port clock_enable ;
 ; SCOMP:inst|GIE                                                                                                                      ; Lost fanout                                 ;
-; LEDController:inst12|pwm_counter[0..7]                                                                                              ; Lost fanout                                 ;
 ; SCOMP:inst|state.ex_nop                                                                                                             ; Lost fanout                                 ;
 ; PLL_main:inst1|PLL_main_0002:pll_main_inst|altera_pll:altera_pll_i|dps_extra_kick:dps_extra_inst|dps_current_state~2                ; Lost fanout                                 ;
 ; PLL_main:inst1|PLL_main_0002:pll_main_inst|altera_pll:altera_pll_i|dps_extra_kick:dps_extra_inst|dps_current_state~3                ; Lost fanout                                 ;
@@ -515,7 +517,7 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; PLL_main:inst1|PLL_main_0002:pll_main_inst|altera_pll:altera_pll_i|dps_extra_kick:dps_extra_inst|dps_current_state.PHASE_DONE_LOW_2 ; Stuck at GND due to stuck port clock        ;
 ; PLL_main:inst1|PLL_main_0002:pll_main_inst|altera_pll:altera_pll_i|dps_extra_kick:dps_extra_inst|dps_current_state.PHASE_DONE_LOW_3 ; Stuck at GND due to stuck port clock        ;
 ; PLL_main:inst1|PLL_main_0002:pll_main_inst|altera_pll:altera_pll_i|dps_extra_kick:dps_extra_inst|dps_current_state.PHASE_DONE_LOW_4 ; Stuck at GND due to stuck port clock        ;
-; Total Number of Removed Registers = 77                                                                                              ;                                             ;
+; Total Number of Removed Registers = 69                                                                                              ;                                             ;
 +-------------------------------------------------------------------------------------------------------------------------------------+---------------------------------------------+
 
 
@@ -534,9 +536,6 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ;                                                                                                                                     ;                         ; SCOMP:inst|PC_saved[8], SCOMP:inst|PC_saved[7], SCOMP:inst|PC_saved[6],                                                              ;
 ;                                                                                                                                     ;                         ; SCOMP:inst|PC_saved[5], SCOMP:inst|PC_saved[4], SCOMP:inst|PC_saved[3],                                                              ;
 ;                                                                                                                                     ;                         ; SCOMP:inst|PC_saved[2], SCOMP:inst|PC_saved[1], SCOMP:inst|PC_saved[0]                                                               ;
-; LEDController:inst12|pwm_counter[7]                                                                                                 ; Lost Fanouts            ; LEDController:inst12|pwm_counter[5], LEDController:inst12|pwm_counter[4],                                                            ;
-;                                                                                                                                     ;                         ; LEDController:inst12|pwm_counter[3], LEDController:inst12|pwm_counter[2],                                                            ;
-;                                                                                                                                     ;                         ; LEDController:inst12|pwm_counter[1], LEDController:inst12|pwm_counter[0]                                                             ;
 ; PLL_main:inst1|PLL_main_0002:pll_main_inst|altera_pll:altera_pll_i|dps_extra_kick:dps_extra_inst|dps_current_state.PHASE_DONE_LOW_1 ; Stuck at GND            ; PLL_main:inst1|PLL_main_0002:pll_main_inst|altera_pll:altera_pll_i|dps_extra_kick:dps_extra_inst|dps_current_state.PHASE_DONE_LOW_0, ;
 ;                                                                                                                                     ; due to stuck port clock ; PLL_main:inst1|PLL_main_0002:pll_main_inst|altera_pll:altera_pll_i|dps_extra_kick:dps_extra_inst|dps_current_state.PHASE_DONE_LOW_2, ;
 ;                                                                                                                                     ;                         ; PLL_main:inst1|PLL_main_0002:pll_main_inst|altera_pll:altera_pll_i|dps_extra_kick:dps_extra_inst|dps_current_state.PHASE_DONE_LOW_3, ;
@@ -555,12 +554,12 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 742   ;
-; Number of registers using Synchronous Clear  ; 152   ;
+; Total registers                              ; 760   ;
+; Number of registers using Synchronous Clear  ; 160   ;
 ; Number of registers using Synchronous Load   ; 236   ;
-; Number of registers using Asynchronous Clear ; 253   ;
+; Number of registers using Asynchronous Clear ; 261   ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 491   ;
+; Number of registers using Clock Enable       ; 501   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -595,15 +594,15 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output              ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------+
 ; 3:1                ; 99 bits   ; 198 LEs       ; 0 LEs                ; 198 LEs                ; Yes        ; |SCOMP_System|SCOMP:inst|PC_stack[3][3] ;
-; 12:1               ; 11 bits   ; 88 LEs        ; 22 LEs               ; 66 LEs                 ; Yes        ; |SCOMP_System|SCOMP:inst|PC[0]          ;
-; 13:1               ; 16 bits   ; 128 LEs       ; 112 LEs              ; 16 LEs                 ; Yes        ; |SCOMP_System|SCOMP:inst|AC[8]          ;
+; 12:1               ; 11 bits   ; 88 LEs        ; 22 LEs               ; 66 LEs                 ; Yes        ; |SCOMP_System|SCOMP:inst|PC[10]         ;
+; 13:1               ; 16 bits   ; 128 LEs       ; 112 LEs              ; 16 LEs                 ; Yes        ; |SCOMP_System|SCOMP:inst|AC[3]          ;
 ; 3:1                ; 10 bits   ; 20 LEs        ; 20 LEs               ; 0 LEs                  ; No         ; |SCOMP_System|IO_DATA[3]                ;
 ; 13:1               ; 16 bits   ; 128 LEs       ; 128 LEs              ; 0 LEs                  ; No         ; |SCOMP_System|SCOMP:inst|Add1           ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------+
 
 
 +--------------------------------------------------------------------------------------------------+
-; Source assignments for SCOMP:inst|altsyncram:altsyncram_component|altsyncram_at24:auto_generated ;
+; Source assignments for SCOMP:inst|altsyncram:altsyncram_component|altsyncram_8d24:auto_generated ;
 +---------------------------------+--------------------+------+------------------------------------+
 ; Assignment                      ; Value              ; From ; To                                 ;
 +---------------------------------+--------------------+------+------------------------------------+
@@ -743,7 +742,7 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE            ; Untyped                     ;
 ; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ ; Untyped                     ;
 ; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ ; Untyped                     ;
-; INIT_FILE                          ; NewLEDsTest.mif      ; Untyped                     ;
+; INIT_FILE                          ; Dimmer2.mif          ; Untyped                     ;
 ; INIT_FILE_LAYOUT                   ; PORT_A               ; Untyped                     ;
 ; MAXIMUM_DEPTH                      ; 0                    ; Signed Integer              ;
 ; CLOCK_ENABLE_INPUT_A               ; BYPASS               ; Untyped                     ;
@@ -756,7 +755,7 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                ; Untyped                     ;
 ; WIDTH_ECCSTATUS                    ; 3                    ; Signed Integer              ;
 ; DEVICE_FAMILY                      ; Cyclone V            ; Untyped                     ;
-; CBXI_PARAMETER                     ; altsyncram_at24      ; Untyped                     ;
+; CBXI_PARAMETER                     ; altsyncram_8d24      ; Untyped                     ;
 +------------------------------------+----------------------+-----------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -1152,27 +1151,28 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------------+-----------------------+
 ; Type                        ; Count                 ;
 +-----------------------------+-----------------------+
-; arriav_ff                   ; 251                   ;
+; arriav_ff                   ; 269                   ;
 ;     CLR                     ; 68                    ;
-;     ENA                     ; 41                    ;
+;     CLR SCLR                ; 8                     ;
+;     ENA                     ; 51                    ;
 ;     ENA SCLR                ; 11                    ;
 ;     ENA SLD                 ; 99                    ;
 ;     SCLR                    ; 20                    ;
 ;     plain                   ; 12                    ;
-; arriav_lcell_comb           ; 386                   ;
-;     arith                   ; 63                    ;
-;         1 data inputs       ; 46                    ;
+; arriav_lcell_comb           ; 399                   ;
+;     arith                   ; 71                    ;
+;         1 data inputs       ; 54                    ;
 ;         2 data inputs       ; 1                     ;
 ;         5 data inputs       ; 16                    ;
 ;     extend                  ; 3                     ;
 ;         7 data inputs       ; 3                     ;
-;     normal                  ; 320                   ;
+;     normal                  ; 325                   ;
 ;         0 data inputs       ; 1                     ;
 ;         1 data inputs       ; 7                     ;
 ;         2 data inputs       ; 11                    ;
 ;         3 data inputs       ; 49                    ;
-;         4 data inputs       ; 61                    ;
-;         5 data inputs       ; 109                   ;
+;         4 data inputs       ; 63                    ;
+;         5 data inputs       ; 112                   ;
 ;         6 data inputs       ; 82                    ;
 ; boundary_port               ; 69                    ;
 ; cyclonev_fractional_pll     ; 1                     ;
@@ -1182,7 +1182,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; stratixv_ram_block          ; 16                    ;
 ;                             ;                       ;
 ; Max LUT depth               ; 5.50                  ;
-; Average LUT depth           ; 2.48                  ;
+; Average LUT depth           ; 2.42                  ;
 +-----------------------------+-----------------------+
 
 
@@ -1191,7 +1191,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:01     ;
+; Top            ; 00:00:00     ;
 +----------------+--------------+
 
 
@@ -1248,7 +1248,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Sun Mar 30 20:28:29 2025
+    Info: Processing started: Mon Mar 31 18:06:47 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off SCOMP -c SCOMP
 Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file timer.vhd
@@ -1283,8 +1283,8 @@ Info (12021): Found 1 design units, including 1 entities, in source file pll_mai
     Info (12023): Found entity 1: PLL_main_0002 File: D:/ECE2031/Lab9/SCOMP_Project_Spring25/PLL_main/PLL_main_0002.v Line: 2
 Warning (12019): Can't analyze file -- file ExternalMemory.vhd is missing
 Info (12021): Found 2 design units, including 1 entities, in source file ledcontroller.vhd
-    Info (12022): Found design unit 1: LEDController-Behavioral File: D:/ECE2031/Lab9/SCOMP_Project_Spring25/LEDController.vhd Line: 21
-    Info (12023): Found entity 1: LEDController File: D:/ECE2031/Lab9/SCOMP_Project_Spring25/LEDController.vhd Line: 10
+    Info (12022): Found design unit 1: LEDController-Behavioral File: D:/ECE2031/Lab9/SCOMP_Project_Spring25/LEDController.vhd Line: 20
+    Info (12023): Found entity 1: LEDController File: D:/ECE2031/Lab9/SCOMP_Project_Spring25/LEDController.vhd Line: 9
 Info (12127): Elaborating entity "SCOMP_System" for the top level hierarchy
 Info (12128): Elaborating entity "HEX_DISP_6" for hierarchy "HEX_DISP_6:inst9"
 Info (12128): Elaborating entity "HEX_DISP" for hierarchy "HEX_DISP_6:inst9|HEX_DISP:inst1"
@@ -1314,7 +1314,7 @@ Info (12133): Instantiated megafunction "SCOMP:inst|altsyncram:altsyncram_compon
     Info (12134): Parameter "indata_aclr_a" = "UNUSED"
     Info (12134): Parameter "indata_aclr_b" = "NONE"
     Info (12134): Parameter "indata_reg_b" = "CLOCK1"
-    Info (12134): Parameter "init_file" = "NewLEDsTest.mif"
+    Info (12134): Parameter "init_file" = "Dimmer2.mif"
     Info (12134): Parameter "init_file_layout" = "PORT_A"
     Info (12134): Parameter "maximum_depth" = "0"
     Info (12134): Parameter "numwords_a" = "2048"
@@ -1344,10 +1344,9 @@ Info (12133): Instantiated megafunction "SCOMP:inst|altsyncram:altsyncram_compon
     Info (12134): Parameter "wrcontrol_wraddress_reg_b" = "CLOCK1"
     Info (12134): Parameter "lpm_hint" = "ENABLE_RUNTIME_MOD=NO"
     Info (12134): Parameter "lpm_type" = "altsyncram"
-Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_at24.tdf
-    Info (12023): Found entity 1: altsyncram_at24 File: D:/ECE2031/Lab9/SCOMP_Project_Spring25/db/altsyncram_at24.tdf Line: 28
-Info (12128): Elaborating entity "altsyncram_at24" for hierarchy "SCOMP:inst|altsyncram:altsyncram_component|altsyncram_at24:auto_generated" File: c:/intelfpga_lite/20.1.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 792
-Critical Warning (127003): Can't find Memory Initialization File or Hexadecimal (Intel-Format) File D:/ECE2031/Lab9/SCOMP_Project_Spring25/NewLEDsTest.mif -- setting all initial values to 0 File: D:/ECE2031/Lab9/SCOMP_Project_Spring25/SCOMP.vhd Line: 70
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_8d24.tdf
+    Info (12023): Found entity 1: altsyncram_8d24 File: D:/ECE2031/Lab9/SCOMP_Project_Spring25/db/altsyncram_8d24.tdf Line: 28
+Info (12128): Elaborating entity "altsyncram_8d24" for hierarchy "SCOMP:inst|altsyncram:altsyncram_component|altsyncram_8d24:auto_generated" File: c:/intelfpga_lite/20.1.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 792
 Info (12128): Elaborating entity "LPM_CLSHIFT" for hierarchy "SCOMP:inst|LPM_CLSHIFT:shifter" File: D:/ECE2031/Lab9/SCOMP_Project_Spring25/SCOMP.vhd Line: 97
 Info (12130): Elaborated megafunction instantiation "SCOMP:inst|LPM_CLSHIFT:shifter" File: D:/ECE2031/Lab9/SCOMP_Project_Spring25/SCOMP.vhd Line: 97
 Info (12133): Instantiated megafunction "SCOMP:inst|LPM_CLSHIFT:shifter" with the following parameter: File: D:/ECE2031/Lab9/SCOMP_Project_Spring25/SCOMP.vhd Line: 97
@@ -1647,7 +1646,7 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/cmpr
     Info (12023): Found entity 1: cmpr_99c File: D:/ECE2031/Lab9/SCOMP_Project_Spring25/db/cmpr_99c.tdf Line: 23
 Info (12033): Analysis and Synthesis generated Signal Tap or debug node instance "auto_signaltap_0"
 Info (11170): Starting IP generation for the debug fabric: alt_sld_fab.
-Info (11172): 2025.03.30.20:28:44 Progress: Loading sldfd7bd03d/alt_sld_fab_wrapper_hw.tcl
+Info (11172): 2025.03.31.18:07:00 Progress: Loading sldfd7bd03d/alt_sld_fab_wrapper_hw.tcl
 Info (11172): Alt_sld_fab.alt_sld_fab: SLD fabric agents which did not specify prefer_host were connected to JTAG
 Info (11172): Alt_sld_fab: Generating alt_sld_fab "alt_sld_fab" for QUARTUS_SYNTH
 Info (11172): Alt_sld_fab: "alt_sld_fab" instantiated alt_sld_fab "alt_sld_fab"
@@ -1696,34 +1695,24 @@ Warning (13046): Tri-state node(s) do not directly drive top-level pin(s)
     Warning (13048): Converted tri-state node "IO_DATA[1]" into a selector File: D:/ECE2031/Lab9/SCOMP_Project_Spring25/HEX_DISP.vhd Line: 25
     Warning (13048): Converted tri-state node "IO_DATA[0]" into a selector File: D:/ECE2031/Lab9/SCOMP_Project_Spring25/HEX_DISP.vhd Line: 25
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "LEDR[9]" is stuck at GND
-    Warning (13410): Pin "LEDR[8]" is stuck at GND
-    Warning (13410): Pin "LEDR[7]" is stuck at GND
-    Warning (13410): Pin "LEDR[6]" is stuck at GND
-    Warning (13410): Pin "LEDR[5]" is stuck at GND
-    Warning (13410): Pin "LEDR[4]" is stuck at GND
-    Warning (13410): Pin "LEDR[3]" is stuck at GND
-    Warning (13410): Pin "LEDR[2]" is stuck at GND
-    Warning (13410): Pin "LEDR[1]" is stuck at GND
-    Warning (13410): Pin "LEDR[0]" is stuck at GND
     Warning (13410): Pin "TPs[3]" is stuck at GND
     Warning (13410): Pin "TPs[2]" is stuck at GND
     Warning (13410): Pin "TPs[1]" is stuck at GND
     Warning (13410): Pin "TPs[0]" is stuck at GND
 Info (286031): Timing-Driven Synthesis is running on partition "Top"
-Info (17049): 23 registers lost all their fanouts during netlist optimizations.
+Info (17049): 15 registers lost all their fanouts during netlist optimizations.
 Critical Warning (35025): Partially connected in-system debug instance "auto_signaltap_0" to 34 of its 39 required data inputs, trigger inputs, acquisition clocks, and dynamic pins.  There were 0 illegal, 0 inaccessible, and 5 missing sources or connections.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 17 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 1283 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 1306 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 15 input pins
     Info (21059): Implemented 57 output pins
-    Info (21061): Implemented 1187 logic cells
+    Info (21061): Implemented 1210 logic cells
     Info (21064): Implemented 19 RAM segments
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 54 warnings
-    Info: Peak virtual memory: 4920 megabytes
-    Info: Processing ended: Sun Mar 30 20:29:01 2025
-    Info: Elapsed time: 00:00:32
-    Info: Total CPU time (on all processors): 00:00:50
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 43 warnings
+    Info: Peak virtual memory: 4930 megabytes
+    Info: Processing ended: Mon Mar 31 18:07:13 2025
+    Info: Elapsed time: 00:00:26
+    Info: Total CPU time (on all processors): 00:00:41
 
 

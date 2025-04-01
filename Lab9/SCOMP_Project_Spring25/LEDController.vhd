@@ -4,8 +4,7 @@
 -- This SCOMP peripheral implements LED dimming on 10 
 LIBRARY IEEE;
 USE IEEE.STD_LOGIC_1164.ALL;
-USE IEEE.STD_LOGIC_ARITH.ALL;
-USE IEEE.STD_LOGIC_UNSIGNED.ALL;
+USE ieee.numeric_std.all;
 
 ENTITY LEDController IS
 PORT(
@@ -20,10 +19,9 @@ END LEDController;
 
 ARCHITECTURE Behavioral OF LEDController IS
 
-    -- Brightness register (8-bit)
+
     SIGNAL brightness_reg : STD_LOGIC_VECTOR(7 DOWNTO 0) := (others => '0');
 
-    -- PWM counter (8-bit)
     SIGNAL pwm_counter : STD_LOGIC_VECTOR(7 DOWNTO 0) := (others => '0');
     SIGNAL pwm_signal  : STD_LOGIC;
 
@@ -44,16 +42,19 @@ BEGIN
     PWM_Process: PROCESS(CLK, RESETN)
     BEGIN
         IF RESETN = '0' THEN
-            pwm_counter <= (others => '0');
+            pwm_counter <= "00000000";
         ELSIF RISING_EDGE(CLK) THEN
-            pwm_counter <= pwm_counter + 1;
+				IF (pwm_counter = "11111111") or (pwm_counter > "11111111") THEN
+					pwm_counter <= "00000000";
+				ELSIF (unsigned(pwm_counter) > unsigned(brightness_reg)) THEN
+					LEDs <= "0000000000";
+					pwm_counter <= std_logic_vector( unsigned(pwm_counter) + 1 );
+				ELSE
+					LEDs <= "1111111111";
+					pwm_counter <= std_logic_vector( unsigned(pwm_counter) + 1 );
+				END IF;
         END IF;
     END PROCESS PWM_Process;
-
-    -- Generate PWM signal: high when pwm_counter < brightness_reg.
-    pwm_signal <= '1' WHEN (pwm_counter < brightness_reg) ELSE '0';
-
-   
-    LEDs <= (others => pwm_signal);
+	 
 
 END Behavioral;
