@@ -20,9 +20,10 @@ END LEDController;
 ARCHITECTURE Behavioral OF LEDController IS
 
 
-    SIGNAL brightness_reg : STD_LOGIC_VECTOR(7 DOWNTO 0) := (others => '0');
+    SIGNAL brightness_reg : STD_LOGIC_VECTOR(5 DOWNTO 0);
+	 SIGNAL on_leds	: STD_LOGIC_VECTOR(9 DOWNTO 0 );
 
-    SIGNAL pwm_counter : STD_LOGIC_VECTOR(7 DOWNTO 0) := (others => '0');
+    SIGNAL pwm_counter : STD_LOGIC_VECTOR(5 DOWNTO 0) := (others => '0');
     SIGNAL pwm_signal  : STD_LOGIC;
 
 BEGIN
@@ -32,8 +33,9 @@ BEGIN
         IF RESETN = '0' THEN
             brightness_reg <= (others => '0');    -- default brightness: off
         ELSIF RISING_EDGE(CLK) THEN
-            IF CS = '1' AND WRITE_EN = '1' THEN
-                brightness_reg <= IO_DATA(7 DOWNTO 0);
+            IF WRITE_EN = '1' AND CS='1' THEN
+                brightness_reg <= IO_DATA(15 DOWNTO 10);
+					 on_leds <= IO_DATA(9 DOWNTO 0);
             END IF;
         END IF;
     END PROCESS Reg_Update;
@@ -42,15 +44,15 @@ BEGIN
     PWM_Process: PROCESS(CLK, RESETN)
     BEGIN
         IF RESETN = '0' THEN
-            pwm_counter <= "00000000";
+            pwm_counter <= "000000";
         ELSIF RISING_EDGE(CLK) THEN
-				IF (pwm_counter = "11111111") or (pwm_counter > "11111111") THEN
-					pwm_counter <= "00000000";
-				ELSIF (unsigned(pwm_counter) > unsigned(brightness_reg)) THEN
+				IF (pwm_counter = "111111") THEN
+					pwm_counter <= "000000";
+				ELSIF (unsigned(pwm_counter) >= unsigned(brightness_reg)) THEN
 					LEDs <= "0000000000";
 					pwm_counter <= std_logic_vector( unsigned(pwm_counter) + 1 );
 				ELSE
-					LEDs <= "1111111111";
+					LEDs <= on_leds;
 					pwm_counter <= std_logic_vector( unsigned(pwm_counter) + 1 );
 				END IF;
         END IF;

@@ -1,5 +1,5 @@
 Assembler report for SCOMP
-Mon Mar 31 18:07:58 2025
+Tue Apr 08 20:53:00 2025
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -39,7 +39,7 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Mon Mar 31 18:07:58 2025 ;
+; Assembler Status      ; Successful - Tue Apr 08 20:53:00 2025 ;
 ; Revision Name         ; SCOMP                                 ;
 ; Top-level Entity Name ; SCOMP_System                          ;
 ; Family                ; Cyclone V                             ;
@@ -78,8 +78,8 @@ https://fpgasoftware.intel.com/eula.
 +----------------+------------------------------------------------------------------------+
 ; Option         ; Setting                                                                ;
 +----------------+------------------------------------------------------------------------+
-; JTAG usercode  ; 0x00E09AF4                                                             ;
-; Checksum       ; 0x00E09AF4                                                             ;
+; JTAG usercode  ; 0x00E0D8E3                                                             ;
+; Checksum       ; 0x00E0D8E3                                                             ;
 +----------------+------------------------------------------------------------------------+
 
 
@@ -89,13 +89,13 @@ https://fpgasoftware.intel.com/eula.
 Info: *******************************************************************
 Info: Running Quartus Prime Assembler
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Mon Mar 31 18:07:51 2025
+    Info: Processing started: Tue Apr 08 20:52:54 2025
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off SCOMP -c SCOMP
 Info (115030): Assembler is generating device programming files
 Info: Quartus Prime Assembler was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 4856 megabytes
-    Info: Processing ended: Mon Mar 31 18:07:58 2025
-    Info: Elapsed time: 00:00:07
-    Info: Total CPU time (on all processors): 00:00:07
+    Info: Peak virtual memory: 4857 megabytes
+    Info: Processing ended: Tue Apr 08 20:53:00 2025
+    Info: Elapsed time: 00:00:06
+    Info: Total CPU time (on all processors): 00:00:06
 
 
