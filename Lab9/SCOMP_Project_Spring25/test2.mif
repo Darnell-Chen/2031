@@ -1,0 +1,73 @@
+WIDTH=16;
+DEPTH=2048;
+
+ADDRESS_RADIX=HEX;
+DATA_RADIX=HEX;
+
+CONTENT BEGIN
+0000: 9000; --   IN Switch
+0001: 3800; --   JPOS START
+0002: 3000; --   JNEG START
+0003: 9002; --   IN Timer
+0004: 1032; --   STORE startTime
+0005: 9002; --   IN Timer
+0006: 1033; --   STORE endTime
+0007: 0833; --   LOAD endTime
+0008: 2032; --   SUB startTime
+0009: 2038; --   SUB Ten
+000A: 3005; --   JNEG COUNT_TIMER
+000B: 083C; --     LOAD BRIGHTNESS
+000C: 6801; --     ADDI 1
+000D: 103C; --     STORE BRIGHTNESS
+000E: 083C; --     LOAD BRIGHTNESS
+000F: 2037; --     SUB Six
+0010: 4026; --     JZERO ADD_LED
+0011: 0837; -- 	LOAD Six
+0012: 9804; --     OUT Display
+0013: 083C; --     LOAD BRIGHTNESS
+0014: 600A; --     SHIFT 10
+0015: 183B; --     ADD LEDs
+0016: 9820; --     OUT &amp;H020
+0017: 0837; --     LOAD Six
+0018: 2039; --     SUB Sixty
+0019: 401C; --     JZERO RESTART
+001A: 381C; --     JPOS RESTART
+001B: 3003; --     JNEG NEXT_STEP
+001C: 4835; -- 	AND Zero
+001D: 103E; --     STORE GlobalCounter
+001E: 103C; --     STORE BRIGHTNESS
+001F: 0836; --     LOAD One
+0020: 103A; --     STORE ON_LEDs
+0021: 103B; --     STORE LEDs
+0022: 103D; --     STORE Combined
+0023: 0834; --     LOAD Reset_Six
+0024: 1037; --     STORE Six
+0025: 2800; --     JUMP START
+0026: 0837; --     LOAD Six
+0027: 6806; --     ADDI 6
+0028: 1037; --     STORE Six
+0029: 083B; --     LOAD LEDs
+002A: 6001; --     SHIFT 1
+002B: 6801; --     ADDI 1
+002C: 103B; --     STORE LEDs
+002D: 083A; --     LOAD ON_LEDs
+002E: 6801; --     ADDI 1
+002F: 103A; --     STORE ON_LEDs
+0030: 2811; --     JUMP OUT_LEDs
+0031: 2831; --   JUMP HALT
+0032: 0000; -- startTime:    DW 0
+0033: 0000; -- endTime:    DW 0
+0034: 0006; -- Reset_Six:	DW 6
+0035: 0000; -- Zero:        DW 0
+0036: 0001; -- One:		DW 1
+0037: 0006; -- Six:        DW 6
+0038: 000A; -- Ten:        DW 10
+0039: 003C; -- Sixty:		DW 60
+003A: 0001; -- ON_LEDs:    DW 1
+003B: 0001; -- LEDs:    DW &amp;B0000000001
+003C: 0000; -- BRIGHTNESS:    DW &amp;B000000
+003D: 0001; -- COMBINED: DW &amp;B0000000000000001
+003E: 0000; -- GlobalCounter: DW 0
+[003F..07FF] : 0000; -- [empty memory]
+END;
+
